@@ -31,6 +31,8 @@ pyOptions = [
     '--ascii',                          '-a',
     '--console',    '--nowindowed',     '-c',
     '--windowed',   '--noconsole',      '-w',
+
+    '--icon <FILE.ico or FILE.exe,ID or FILE.icns or Image or “NONE”>',    '-i <FILE.ico or FILE.exe,ID or FILE.icns or Image or “NONE”>',
     
     '--key <KEY>',
     '--upx-dir <UPX_DIR>',
