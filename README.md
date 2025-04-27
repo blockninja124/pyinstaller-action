@@ -1,3 +1,5 @@
+**This fork updates this action to using upload-artifact and checkout v4**
+
 Check all available usable tags [here](../../tags)
 <br>
 You can also use any major tags like `@v1` for any `@v1.*.*`
