@@ -109,7 +109,7 @@ runs:
         path: ${{ inputs.exe_path }}
     
     - name: (Upload) generated spec file - if .py
-      if: endsWith(inputs.spec, '.py')
+      if: endsWith(inputs.spec, '.py') && inputs.upload_exe_with_name != ''
       uses: actions/upload-artifact@v4
       with:
         name: Generated spec file
