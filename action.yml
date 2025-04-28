@@ -35,6 +35,9 @@ inputs:
   upload_exe_with_name:
     description: If passed, uploads executable artifact  with this name. Else, artifact won't be uploaded.
     default: ''
+  upload_spec_file:
+    description: If spec is a .py file, whether to upload the generated .spec or not. Defaults to true
+    defualt: true
 
 outputs:
   executable_path:
@@ -109,7 +112,7 @@ runs:
         path: ${{ inputs.exe_path }}
     
     - name: (Upload) generated spec file - if .py
-      if: endsWith(inputs.spec, '.py') && inputs.upload_exe_with_name != ''
+      if: endsWith(inputs.spec, '.py') && inputs.upload_exe_with_name != '' && inputs.upload_spec_file
       uses: actions/upload-artifact@v4
       with:
         name: Generated spec file
